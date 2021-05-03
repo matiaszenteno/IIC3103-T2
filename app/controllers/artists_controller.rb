@@ -15,7 +15,6 @@ class ArtistsController < ApplicationController
                       self: "https://iic3103-music.herokuapp.com/artists/#{artist.id}"
       }
     end
-
     render json: my_response.to_json, :status => 200
   end
 
@@ -46,31 +45,9 @@ class ArtistsController < ApplicationController
     end
   end
 
-  def update
-    @artist = Artist.find(params[:id])
-    @artist.update(artist_params)
-  end
-
-  def destroy
-    if params[:id]
-      Artist.find(params[:id]).destroy
-      render :nothing => true, :status => 204
-    else
-      head 405
-    end
-  end
-
   private
 
   def artist_params
     params.permit(:name, :age)
-  end
-
-  def as_json(options={})
-    puts 'JAASDASD'
-    {
-      :id => id,
-      :name => 'AJAJJA',
-    }
   end
 end

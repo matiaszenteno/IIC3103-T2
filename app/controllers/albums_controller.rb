@@ -17,7 +17,6 @@ class AlbumsController < ApplicationController
                         self: "https://iic3103-music.herokuapp.com/albums/#{album.id}",
         }
       end
-  
       render json: my_response.to_json, :status => 200
     end
 

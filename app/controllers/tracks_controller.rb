@@ -42,7 +42,6 @@ class TracksController < ApplicationController
                           self: "https://iic3103-music.herokuapp.com/tracks/#{track.id}",
           }
         end
-
         render json: my_response.to_json, :status => 200
       else
         head 405
@@ -77,18 +76,6 @@ class TracksController < ApplicationController
             self: "https://iic3103-music.herokuapp.com/tracks/#{@track.id}",
           }, :status => 201
         end
-      else
-        head 405
-      end
-    end
-
-    def update
-      if @artist && !@album && !@track 
-        @track.update(track_params)
-      elsif !@artist && @album && !@track
-        # TODO
-      elsif !@artist && !@album && @track  
-        # TODO
       else
         head 405
       end

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root ''
+
   resources :artists do
     resources :albums, :tracks
   end
@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     resources :tracks
   end
 
+  resources :artists
+  resources :albums
   resources :tracks
 end
 
