@@ -10,9 +10,9 @@ class ArtistsController < ApplicationController
       my_response << {id: artist.id, 
                       name: artist.name,
                       age: artist.age,
-                      albums: "http://127.0.0.1:3000/artists/#{artist.id}/albums",
-                      tracks: "http://127.0.0.1:3000/artists/#{artist.id}/tracks",
-                      self: "http://127.0.0.1:3000/artists/#{artist.id}"
+                      albums: "https://iic3103-music.herokuapp.com/artists/#{artist.id}/albums",
+                      tracks: "https://iic3103-music.herokuapp.com/artists/#{artist.id}/tracks",
+                      self: "https://iic3103-music.herokuapp.com/artists/#{artist.id}"
       }
     end
 
@@ -25,9 +25,9 @@ class ArtistsController < ApplicationController
       id: @artist.id, 
       name: @artist.name, 
       age: @artist.age,
-      albums: "http://127.0.0.1:3000/artists/#{@artist.id}/albums",
-      tracks: "http://127.0.0.1:3000/artists/#{@artist.id}/tracks",
-      self: "http://127.0.0.1:3000/artists/#{@artist.id}",
+      albums: "https://iic3103-music.herokuapp.com/artists/#{@artist.id}/albums",
+      tracks: "https://iic3103-music.herokuapp.com/artists/#{@artist.id}/tracks",
+      self: "https://iic3103-music.herokuapp.com/artists/#{@artist.id}",
     }, :status => 200
   end
 
@@ -39,9 +39,9 @@ class ArtistsController < ApplicationController
         id: @artist.id, 
         name: @artist.name, 
         age: @artist.age,
-        albums: "http://127.0.0.1:3000/artists/#{@artist.id}/albums",
-        tracks: "http://127.0.0.1:3000/artists/#{@artist.id}/tracks",
-        self: "http://127.0.0.1:3000/artists/#{@artist.id}",
+        albums: "https://iic3103-music.herokuapp.com/artists/#{@artist.id}/albums",
+        tracks: "https://iic3103-music.herokuapp.com/artists/#{@artist.id}/tracks",
+        self: "https://iic3103-music.herokuapp.com/artists/#{@artist.id}",
       }, :status => 201
     end
   end

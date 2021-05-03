@@ -12,9 +12,9 @@ class AlbumsController < ApplicationController
         my_response << {id: album.id, 
                         name: album.name, 
                         genre: album.genre,
-                        artist: "http://127.0.0.1:3000/artists/#{album.artist.id}",
-                        tracks: "http://127.0.0.1:3000/albums/#{album.id}/tracks",
-                        self: "http://127.0.0.1:3000/albums/#{album.id}",
+                        artist: "https://iic3103-music.herokuapp.com/artists/#{album.artist.id}",
+                        tracks: "https://iic3103-music.herokuapp.com/albums/#{album.id}/tracks",
+                        self: "https://iic3103-music.herokuapp.com/albums/#{album.id}",
         }
       end
   
@@ -27,9 +27,9 @@ class AlbumsController < ApplicationController
         id: @album.id, 
         name: @album.name, 
         genre: @album.genre,
-        artist: "http://127.0.0.1:3000/artists/#{@album.artist.id}",
-        tracks: "http://127.0.0.1:3000/albums/#{@album.id}/tracks",
-        self: "http://127.0.0.1:3000/albums/#{@album.id}",
+        artist: "https://iic3103-music.herokuapp.com/artists/#{@album.artist.id}",
+        tracks: "https://iic3103-music.herokuapp.com/albums/#{@album.id}/tracks",
+        self: "https://iic3103-music.herokuapp.com/albums/#{@album.id}",
       }, :status => 200
     end
 
@@ -42,9 +42,9 @@ class AlbumsController < ApplicationController
             id: @album.id, 
             name: @album.name, 
             genre: @album.genre,
-            artist: "http://127.0.0.1:3000/artists/#{@album.artist.id}",
-            tracks: "http://127.0.0.1:3000/albums/#{@album.id}/tracks",
-            self: "http://127.0.0.1:3000/albums/#{@album.id}",
+            artist: "https://iic3103-music.herokuapp.com/artists/#{@album.artist.id}",
+            tracks: "https://iic3103-music.herokuapp.com/albums/#{@album.id}/tracks",
+            self: "https://iic3103-music.herokuapp.com/albums/#{@album.id}",
           }, :status => 201
         end
       else
