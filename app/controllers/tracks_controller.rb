@@ -6,12 +6,12 @@ class TracksController < ApplicationController
         @tracks = @artist.tracks
         my_response = []
         @tracks.each do |track|
-          my_response << {id: @track.id, 
-                          name: @track.name, 
-                          duration: @track.duration,
-                          artist: "http://127.0.0.1:3000/artists/#{@track.album.artist.id}",
-                          album: "http://127.0.0.1:3000/albums/#{@track.album.id}",
-                          self: "http://127.0.0.1:3000/tracks/#{@track.id}",
+          my_response << {id: track.id, 
+                          name: track.name, 
+                          duration: track.duration,
+                          artist: "http://127.0.0.1:3000/artists/#{track.album.artist.id}",
+                          album: "http://127.0.0.1:3000/albums/#{track.album.id}",
+                          self: "http://127.0.0.1:3000/tracks/#{track.id}",
           }
         end
 
@@ -20,12 +20,12 @@ class TracksController < ApplicationController
         @tracks = @album.tracks
         my_response = []
         @tracks.each do |track|
-          my_response << {id: @track.id, 
-                          name: @track.name, 
-                          duration: @track.duration,
-                          artist: "http://127.0.0.1:3000/artists/#{@track.album.artist.id}",
-                          album: "http://127.0.0.1:3000/albums/#{@track.album.id}",
-                          self: "http://127.0.0.1:3000/tracks/#{@track.id}",
+          my_response << {id: track.id, 
+                          name: track.name, 
+                          duration: track.duration,
+                          artist: "http://127.0.0.1:3000/artists/#{track.album.artist.id}",
+                          album: "http://127.0.0.1:3000/albums/#{track.album.id}",
+                          self: "http://127.0.0.1:3000/tracks/#{track.id}",
           }
         end
 
@@ -34,12 +34,12 @@ class TracksController < ApplicationController
         @tracks = Track.all
         my_response = []
         @tracks.each do |track|
-          my_response << {id: @track.id, 
-                          name: @track.name, 
-                          duration: @track.duration,
-                          artist: "http://127.0.0.1:3000/artists/#{@track.album.artist.id}",
-                          album: "http://127.0.0.1:3000/albums/#{@track.album.id}",
-                          self: "http://127.0.0.1:3000/tracks/#{@track.id}",
+          my_response << {id: track.id, 
+                          name: track.name, 
+                          duration: track.duration,
+                          artist: "http://127.0.0.1:3000/artists/#{track.album.artist.id}",
+                          album: "http://127.0.0.1:3000/albums/#{track.album.id}",
+                          self: "http://127.0.0.1:3000/tracks/#{track.id}",
           }
         end
 
