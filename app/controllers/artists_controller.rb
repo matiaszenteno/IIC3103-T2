@@ -63,8 +63,6 @@ class ArtistsController < ApplicationController
   end
 
   def destroy
-    puts 'ASDASD'
-    puts @artist
     if @artist && !@album && !@track 
       @artist.destroy
       render :json => {}, :status => 204
@@ -76,9 +74,6 @@ class ArtistsController < ApplicationController
   private
 
   def get_artist
-    puts 'JOJOJO'
-    puts params
-    puts params[:id]
     if params[:id]
       if Artist.exists?(id: params[:id])
         @artist = Artist.find(params[:id]) if params[:id]

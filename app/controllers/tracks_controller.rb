@@ -40,9 +40,6 @@ class TracksController < ApplicationController
         @tracks = Track.all
         my_response = []
         @tracks.each do |track|
-          puts 'JIDID'
-          puts track.album
-          puts 'JADAD'
           my_response << {name: track.name, 
                           duration: track.duration,
                           times_played: track.times_played,
