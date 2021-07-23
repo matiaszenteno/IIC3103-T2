@@ -1,5 +1,5 @@
 class Album < ApplicationRecord
     self.primary_key = :id
     belongs_to :artist
-    has_many :tracks
+    has_many :tracks, dependent: :destroy
 end
